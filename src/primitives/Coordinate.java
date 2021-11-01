@@ -10,6 +10,7 @@ import static primitives.Util.*;
  * @version 5780B updated according to new requirements
  */
 public final class Coordinate {
+
     /**
      * Coordinate value, intentionally "package-friendly" due to performance
      * constraints
@@ -27,6 +28,11 @@ public final class Coordinate {
     }
 
     /*************** Admin *****************/
+    /**
+     * equals
+     * @param obj
+     * @return if obj is equals to coord
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -36,6 +42,10 @@ public final class Coordinate {
         return isZero(coord - other.coord);
     }
 
+    /**
+     * toString
+     * @return coord as string
+     */
     @Override
     public String toString() {
         return "" + coord;
